@@ -104,8 +104,9 @@ const (
 	backoffDuration = time.Second * 5
 	backoffFactor   = 1.2
 	backoffSteps    = 10
-
-	defaultFSType = "ext4"
+	
+	// default FSType is ext4, we change to xfs to avoid jdb2 problem
+	defaultFSType = "xfs"
 
 	snapshotKind     = "VolumeSnapshot"
 	snapshotAPIGroup = snapapi.GroupName       // "snapshot.storage.k8s.io"
