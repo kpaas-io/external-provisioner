@@ -30,9 +30,7 @@ import (
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
 	"github.com/kubernetes-csi/csi-lib-utils/connection"
-
-	// "github.com/kubernetes-csi/external-provisioner/pkg/features"
-	"github.com/kpaas-io/external-provisioner/pkg/features"
+	"github.com/kubernetes-csi/external-provisioner/pkg/features"
 	snapapi "github.com/kubernetes-csi/external-snapshotter/pkg/apis/volumesnapshot/v1alpha1"
 	snapclientset "github.com/kubernetes-csi/external-snapshotter/pkg/client/clientset/versioned"
 	"sigs.k8s.io/sig-storage-lib-external-provisioner/controller"
@@ -107,8 +105,7 @@ const (
 	backoffFactor   = 1.2
 	backoffSteps    = 10
 
-	// default fsType is ext4, we use xfs aviod jdb2 stuck problem
-	defaultFSType = "xfs"
+	defaultFSType = "ext4"
 
 	snapshotKind     = "VolumeSnapshot"
 	snapshotAPIGroup = snapapi.GroupName       // "snapshot.storage.k8s.io"
