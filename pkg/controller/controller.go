@@ -105,7 +105,8 @@ const (
 	backoffFactor   = 1.2
 	backoffSteps    = 10
 
-	defaultFSType = "ext4"
+	// default fsType is ext4, we use xfs aviod jdb2 stuck problem
+ 	defaultFSType = "xfs"
 
 	snapshotKind     = "VolumeSnapshot"
 	snapshotAPIGroup = snapapi.GroupName       // "snapshot.storage.k8s.io"
